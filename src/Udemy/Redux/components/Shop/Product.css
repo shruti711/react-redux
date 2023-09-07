@@ -1,0 +1,11 @@
+.Products h2 {
+    margin: 2rem auto;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .Products ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }

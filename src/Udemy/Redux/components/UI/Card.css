@@ -1,0 +1,9 @@
+.CardSelection {
+    margin: 1rem auto;
+    border-radius: 6px;
+    background-color: rgb(14, 12, 12);
+    padding: 1rem;
+    width: 90%;
+    max-width: 40rem;
+    color: #ffff;
+  }
