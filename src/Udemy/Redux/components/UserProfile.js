@@ -6,6 +6,9 @@ import Products from './Shop/Product';
 import { uiActions } from '../Store/UISlice';
 import Notification from './UI/Notification'
 
+
+let IsInitial = true;
+
 const UserProfile = (props) => {
 
   const showCart = useSelector(state => state.ui.cardIsVisible);
@@ -36,6 +39,13 @@ const UserProfile = (props) => {
               message:  'Send card data successfully'
             }))
         }
+
+        // When we reload then will not see the notification, if perform any functionality then only notification comes
+        if(IsInitial){
+          IsInitial = false;
+          return;
+        }
+
         sensCardData().catch(error => {
           dispatch(uiActions.showNotification({
             status: 'error',
